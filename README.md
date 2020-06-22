@@ -21,9 +21,16 @@ This plugin uses the `page.create:after` hook to store 2 additional fields into 
 
 In addition to that, the plugin provides a field method `epoch2date` to return this epoch in a formatted string. The default format of this string is set to `D, j M Y H:i:s T`, but this can be changed on a global level in site-config with
 
-    'adspectus.date-extended.date_format' => string or constant
+    'adspectus.date-extended.dateFormat' => string or constant
 
 or as a parameter to the field method.
+
+The fieldnames can be set with
+
+    'adspectus.date-extended.dateCreated' => 'myCreationDate',
+    'adspectus.date-extended.dateModified' => 'myModificationDate',
+
+Otherwise they default to `dateCreatedEpoch` and `dateModifiedEpoch` resp.
 
 ## Examples
 
@@ -32,11 +39,11 @@ After installation of this plugin, when you create and afterwards change (text o
 ```
 ----
 
-Date-created-epoch: 1592831460
+Datecreatedepoch: 1592831460
 
 ----
 
-Date-modified-epoch: 1592831953
+Datemodifiedepoch: 1592831953
 
 ----
 ```
@@ -51,14 +58,14 @@ Then, you can use this in your blueprint:
           en: Creation Date
           de: Erstellungsdatum
         theme: none
-        text: "{{ page.date_created_epoch.epoch2date }}"
+        text: "{{ page.dateCreatedEpoch.epoch2date }}"
       date_modified_info:
         type: info
         label:
           en: Last Modification
           de: Letzte Aktualisierung
         theme: none
-        text: "{{ page.date_modified_epoch.epoch2date('c') }}"
+        text: "{{ page.dateModifiedEpoch.epoch2date('c') }}"
 ```
 
 and in the panel it will look like this:
