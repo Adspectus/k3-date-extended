@@ -1,5 +1,2 @@
-.gitattributes
-.gitignore
-LICENSE
-README.md
-panel01.png
+.gitattributes export-ignore
+.gitignore export-ignore
