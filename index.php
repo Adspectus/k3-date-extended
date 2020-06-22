@@ -7,7 +7,7 @@
  * date is updated.
  * 
  * In addition to that, the plugin provides a field method "epoch2date" to return
- * this epoch in a formatted string. The default format of this sring is set to
+ * this epoch in a formatted string. The default format of this string is set to
  * "D, j M Y H:i:s T", but this can be changed on a global level in site-config
  * with
  * 
