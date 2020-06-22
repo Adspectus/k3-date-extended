@@ -3,7 +3,7 @@
   "description": "Plugin to provide two additional date fields which will store the creation date and the modication date as a Unix Epoch. A field method is provided to convert this epoch to a formatted string.",
   "type": "kirby-plugin",
   "version": "1.1.0",
-  "license": "GPL-3",
+  "license": "GPL-3.0-or-later",
   "authors": [
       {
           "name": "Adspectus",
