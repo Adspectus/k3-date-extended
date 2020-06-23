@@ -15,6 +15,16 @@ Kirby 3 plugin to provide additional date fields as epoch
 
 ### Installation
 
+You can install this plugin via one of the following methods:
+
+1. Composer
+
+       composer require adspectus/date-extended
+
+2. Manual
+
+   Clone this repository or download the current release and extract the file `index.php` into a new folder `site/plugins/date-extended` of your Kirby installation.
+
 ## Usage
 
 This plugin uses the `page.create:after` hook to store 2 additional fields into the page, the creation and modification date/time as a Unix Epoch. With the `page.update:after` and the `page.changeTitle:after` hooks only the modification date is updated.
