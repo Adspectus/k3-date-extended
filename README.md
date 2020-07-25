@@ -5,7 +5,11 @@
 [![Kirby version](https://img.shields.io/static/v1?label=Kirby&message=3&color=yellow&style=flat-square)](https://getkirby.com/)
 
 
-Kirby 3 plugin to provide additional date fields as epoch
+Kirby 3 plugin to provide additional date fields as epoch.
+
+The rationale to use the epoch, which is the number of seconds starting from Jan. 1, 1970 0:00 GMT as a date/time field, is to have an universally valid piece of information about the date and time from which one can derive all other kind of information, i.e. the same point in time in different timezones. Moreover, it is easier to calculate or compare different dates or points in time using the epoch. The drawback is that it is not very human-friendly to read and write. However, there shouldn't be any serious programming or scripting language which does not contain built-in functions to convert back and forth between the epoch and a human-friendly date and time.
+
+The epoch as it is written by the `time()` function used here, always refers to GMT, which can be used as being the same time as UTC, even though GMT and UTC are not the same. Thus, the value of the epoch is independent from the timezone setting in your `php.ini` file, but the formatted date as returned by the `date()` function will take that into account.
 
 ## Getting Started
 
